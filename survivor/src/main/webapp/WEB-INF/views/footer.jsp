@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -61,7 +61,155 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="${pageContext.request.contextPath}/js/translations.js"></script>
-    <script src="${pageContext.request.contextPath}/js/script.js"></script>
-</body>
-</html>
+    <script>window.addEventListener("DOMContentLoaded", () => {
+
+            // ================================
+            // THEME TOGGLE
+            // ================================
+            const themeToggle = document.getElementById("themeToggle");
+            const themeIcon = document.querySelector(".theme-icon");
+
+            function updateTheme() {
+
+                const isDark = document.body.classList.contains("dark");
+
+                // Icon hiển thị chế độ sẽ chuyển tới
+                themeIcon.textContent = isDark ? "🌞" : "🌙";
+
+                localStorage.setItem("theme", isDark ? "dark" : "light");
+            }
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.body.classList.add("dark");
+            } else {
+                document.body.classList.remove("dark");
+            }
+
+            updateTheme();
+
+            // Toggle theme
+            themeToggle.addEventListener("click", () => {
+
+                document.body.classList.toggle("dark");
+
+                updateTheme();
+            });
+
+
+
+            // ================================
+            // LANGUAGE TOGGLE
+            // ================================
+            const translations = {
+
+                en: {
+                    "nav-features": "Features",
+                    "nav-characters": "Characters",
+                    "nav-weapons": "Weapons",
+                    "nav-enemies": "Enemies",
+                    "nav-events": "Events",
+                    "nav-play": "Play Now"
+                },
+
+                vi: {
+                    "nav-features": "Tính Năng",
+                    "nav-characters": "Nhân Vật",
+                    "nav-weapons": "Vũ Khí",
+                    "nav-enemies": "Quái Vật",
+                    "nav-events": "Sự Kiện",
+                    "nav-play": "Chơi Ngay"
+                }
+            };
+
+            const langToggle = document.getElementById("langToggle");
+            const langText = document.getElementById("langText");
+
+            let currentLang = localStorage.getItem("language") || "vi";
+
+            function updateLanguage(lang) {
+
+                document.querySelectorAll("[data-translate]").forEach(el => {
+
+                    const key = el.getAttribute("data-translate");
+
+                    if (translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+
+                langText.textContent = lang.toUpperCase();
+
+                localStorage.setItem("language", lang);
+            }
+
+            // Load saved language
+            updateLanguage(currentLang);
+
+            // Toggle language
+            langToggle.addEventListener("click", () => {
+
+                currentLang = currentLang === "vi" ? "en" : "vi";
+
+                updateLanguage(currentLang);
+            });
+
+
+
+            // ================================
+            // HERO SLIDER
+            // ================================
+            const slides = document.querySelectorAll(".hero-slide");
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+
+                slides.forEach(slide => {
+                    slide.classList.remove("active");
+                });
+
+                slides[index].classList.add("active");
+            }
+
+            function nextSlide() {
+
+                currentSlide++;
+
+                if (currentSlide >= slides.length) {
+                    currentSlide = 0;
+                }
+
+                showSlide(currentSlide);
+            }
+
+            // Hiện slide đầu
+            if (slides.length > 0) {
+
+                showSlide(currentSlide);
+
+                // Auto slide mỗi 4 giây
+                setInterval(nextSlide, 4000);
+            }
+
+
+
+            // ================================
+            // MOBILE MENU
+            // ================================
+            const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+            const navLinks = document.getElementById("navLinks");
+
+            mobileMenuBtn.addEventListener("click", () => {
+
+                navLinks.classList.toggle("active");
+            });
+
+        });
+    </script>
+
+    </body>
+
+    </html>
