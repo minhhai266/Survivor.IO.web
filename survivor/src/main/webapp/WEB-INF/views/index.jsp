@@ -81,43 +81,45 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">⚡</div>
-                        <h3 class="feature-title">Chiến Đấu 1000+ Zombies</h3>
-                        <p class="feature-description">Đối mặt với đám đông zombie khổng lồ</p>
+                        <h3 class="feature-title" data-translate="features-zombie-title">Chiến Đấu 1000+ Zombies</h3>
+                        <p class="feature-description" data-translate="features-zombie-description">
+                            Đối mặt với đám đông zombie khổng lồ
+                        </p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🎯</div>
-                        <h3 class="feature-title">Kỹ Năng Roguelike</h3>
-                        <p class="feature-description">Kết hợp các kỹ năng mạnh mẽ</p>
+                        <h3 class="feature-title" data-translate="features-skill-title">Kỹ Năng Roguelike</h3>
+                        <p class="feature-description" data-translate="features-skill-description">Kết hợp các kỹ năng mạnh mẽ</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">♾️</div>
-                        <h3 class="feature-title">Sinh Tồn Vô Tận</h3>
-                        <p class="feature-description">Thách thức giới hạn của bạn</p>
+                        <h3 class="feature-title" data-translate="features-survival-title">Sinh Tồn Vô Tận</h3>
+                        <p class="feature-description" data-translate="features-survival-description">Thách thức giới hạn của bạn</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">💀</div>
-                        <h3 class="feature-title">Trận Đánh Boss</h3>
-                        <p class="feature-description">Đánh bại boss khổng lồ</p>
+                        <h3 class="feature-title" data-translate="features-boss-title">Trận Đánh Boss</h3>
+                        <p class="feature-description" data-translate="features-boss-description">Đánh bại boss khổng lồ</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">👥</div>
-                        <h3 class="feature-title">Sự Kiện Nhiều Người</h3>
-                        <p class="feature-description">Hợp tác với người chơi toàn cầu</p>
+                        <h3 class="feature-title" data-translate="features-event-title">Sự Kiện Nhiều Người</h3>
+                        <p class="feature-description" data-translate="features-event-description">Hợp tác với người chơi toàn cầu</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🐾</div>
-                        <h3 class="feature-title">Hệ Thống Pet</h3>
-                        <p class="feature-description">Thu thập và tiến hóa đồng đội</p>
+                        <h3 class="feature-title" data-translate="features-pet-title">Hệ Thống Pet</h3>
+                        <p class="feature-description" data-translate="features-pet-description">Thu thập và tiến hóa đồng đội</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">⚔️</div>
-                        <h3 class="feature-title">Tiến Hóa Vũ Khí</h3>
-                        <p class="feature-description">Nâng cấp vũ khí mạnh mẽ</p>
+                        <h3 class="feature-title" data-translate="features-weapon-title">Tiến Hóa Vũ Khí</h3>
+                        <p class="feature-description" data-translate="features-weapon-description">Nâng cấp vũ khí mạnh mẽ</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">👤</div>
-                        <h3 class="feature-title">Tùy Chỉnh Anh Hùng</h3>
-                        <p class="feature-description">Chọn từ các anh hùng độc đáo</p>
+                        <h3 class="feature-title" data-translate="features-hero-title">Tùy Chỉnh Anh Hùng</h3>
+                        <p class="feature-description" data-translate="features-hero-description">Chọn từ các anh hùng độc đáo</p>
                     </div>
                 </div>
             </div>
@@ -163,14 +165,14 @@
                                     <span class="skill-icon">🛡️</span>
                                     <span class="skill-name">${character.skill}</span>
                                 </div>
-                                <button class="btn-primary btn-block">Mở Khóa</button>
+                                <button class="btn-primary btn-block" data-translate="unlock-btn">Mở Khóa</button>
                             </div>
                         </div>
                     </c:forEach>
                 </div>
 
                 <div class="text-center" style="margin-top: 2rem;">
-                    <a href="${pageContext.request.contextPath}/characters" class="btn-secondary btn-lg">
+                    <a href="${pageContext.request.contextPath}/characters" class="btn-secondary btn-lg" data-translate="view-all-characters">
                         Xem Tất Cả Nhân Vật
                     </a>
                 </div>
@@ -203,7 +205,7 @@
                                     <span class="rewards-label">🎁 Phần thưởng:</span>
                                     <p class="rewards-text">${event.rewards}</p>
                                 </div>
-                                <button class="btn-primary btn-block">🏆 Tham Gia Sự Kiện</button>
+                                <button class="btn-primary btn-block" data-translate="event-join-btn">🏆 Tham Gia Sự Kiện</button>
                             </div>
                         </div>
                     </c:forEach>
@@ -225,22 +227,34 @@
                     <div class="download-card">
                         <div class="download-icon android-icon">📱</div>
                         <h3 class="download-name">Google Play</h3>
-                        <p class="download-version">Android 5.0 trở lên</p>
-                        <button class="btn-primary">⬇ Tải Xuống</button>
+                        <p class="download-version" data-translate="download-android-version">
+                            Android 5.0 trở lên
+                        </p>
+                        <button class="btn-primary" data-translate="download-btn">
+                            ⬇ Tải Xuống
+                        </button>
                     </div>
 
                     <div class="download-card">
                         <div class="download-icon ios-icon">📱</div>
                         <h3 class="download-name">App Store</h3>
-                        <p class="download-version">iOS 12.0 trở lên</p>
-                        <button class="btn-primary">⬇ Tải Xuống</button>
+                        <p class="download-version" data-translate="download-ios-version">
+                            iOS 12.0 trở lên
+                        </p>
+                        <button class="btn-primary" data-translate="download-btn">
+                            ⬇ Tải Xuống
+                        </button>
                     </div>
 
                     <div class="download-card">
                         <div class="download-icon windows-icon">💻</div>
                         <h3 class="download-name">Windows PC</h3>
-                        <p class="download-version">Phiên Bản Giả Lập</p>
-                        <button class="btn-primary">⬇ Tải Xuống</button>
+                        <p class="download-version" data-translate="download-windows-version">
+                            Phiên Bản Giả Lập
+                        </p>
+                        <button class="btn-primary" data-translate="download-btn">
+                            ⬇ Tải Xuống
+                        </button>
                     </div>
                 </div>
             </div>

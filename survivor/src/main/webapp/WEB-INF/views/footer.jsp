@@ -16,30 +16,30 @@
                 <div class="footer-col">
                     <h4 class="footer-title" data-translate="footer-game">Trò Chơi</h4>
                     <ul class="footer-links">
-                        <li><a href="#features">Tính Năng</a></li>
-                        <li><a href="${pageContext.request.contextPath}/characters">Nhân Vật</a></li>
-                        <li><a href="${pageContext.request.contextPath}/weapons">Vũ Khí</a></li>
-                        <li><a href="${pageContext.request.contextPath}/events">Sự Kiện</a></li>
+                        <li><a href="#features" data-translate="features">Tính Năng</a></li>
+                        <li><a href="${pageContext.request.contextPath}/characters" data-translate="characters">Nhân Vật</a></li>
+                        <li><a href="${pageContext.request.contextPath}/weapons" data-translate="weapons">Vũ Khí</a></li>
+                        <li><a href="${pageContext.request.contextPath}/events" data-translate="events">Sự Kiện</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4 class="footer-title" data-translate="footer-community">Cộng Đồng</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">Diễn Đàn</a></li>
-                        <li><a href="#">Wiki</a></li>
-                        <li><a href="#">Fan Art</a></li>
+                        <li><a href="#" data-translate="discord">Discord</a></li>
+                        <li><a href="#" data-translate="forum">Diễn Đàn</a></li>
+                        <li><a href="#" data-translate="wiki">Wiki</a></li>
+                        <li><a href="#" data-translate="fan-art">Fan Art</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4 class="footer-title" data-translate="footer-support">Hỗ Trợ</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Trung Tâm Trợ Giúp</a></li>
-                        <li><a href="#">Điều Khoản</a></li>
-                        <li><a href="#">Bảo Mật</a></li>
-                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#" data-translate="support-center">Trung Tâm Trợ Giúp</a></li>
+                        <li><a href="#" data-translate="terms">Điều Khoản</a></li>
+                        <li><a href="#" data-translate="privacy">Bảo Mật</a></li>
+                        <li><a href="#" data-translate="contact">Liên Hệ</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,8 +53,8 @@
                 </div>
 
                 <div class="copyright">
-                    <p>&copy; 2026 Survivor.io. Đã đăng ký bản quyền.</p>
-                    <p class="built-with">Xây dựng với Spring Boot & JSP</p>
+                    <p data-translate="footer-register">&copy; 2026 Survivor.io. Đã đăng ký bản quyền.</p>
+                    <p class="built-with" data-translate="built-with">Xây dựng với Spring Boot & JSP</p>
                 </div>
             </div>
         </div>

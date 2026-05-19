@@ -10,9 +10,9 @@ public class HomeController {
     public String getHome() {
         return "index";
     }
-    @GetMapping("/character")
-    public String getCharacter() {
-        return "character";
+    @GetMapping("/characters")
+    public String getCharacters() {
+        return "characters";
     }
     @GetMapping("/events")
     public String getEvents() {

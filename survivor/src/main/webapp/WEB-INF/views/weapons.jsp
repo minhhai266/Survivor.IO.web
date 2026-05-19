@@ -4,8 +4,8 @@
 
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title gradient-text">Vũ Khí & Trang Bị</h1>
-        <p class="page-subtitle">Thu thập và tiến hóa trang bị mạnh mẽ</p>
+        <h1 class="page-title gradient-text" data-translate="weapons-page-title">Vũ Khí & Trang Bị</h1>
+        <p class="page-subtitle" data-translate="weapons-page-subtitle">Thu thập và tiến hóa trang bị mạnh mẽ</p>
     </div>
 </section>
 
@@ -48,14 +48,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn-primary btn-block">Nâng Cấp</button>
+                    <button class="btn-primary btn-block" data-translate="upgrade-btn">Nâng Cấp</button>
                 </div>
             </c:forEach>
         </div>
 
         <c:if test="${empty weapons}">
             <div class="empty-state">
-                <p>Không có vũ khí nào trong danh mục này.</p>
+                <p data-translate="empty-weapons">Không có vũ khí nào trong danh mục này.</p>
             </div>
         </c:if>
     </div>

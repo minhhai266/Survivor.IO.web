@@ -4,8 +4,8 @@
 
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title gradient-text">Anh Hùng</h1>
-        <p class="page-subtitle">Chọn chiến binh của bạn và thống trị tận thế</p>
+        <h1 class="page-title gradient-text" data-translate="character-hero">Anh Hùng</h1>
+        <p class="page-subtitle" data-translate="character-subtitle">Chọn chiến binh của bạn và thống trị tận thế</p>
     </div>
 </section>
 
@@ -13,10 +13,10 @@
     <div class="container">
         <!-- Tier Tabs -->
         <div class="tier-tabs">
-            <a href="?tier=S Tier" class="tier-tab ${selectedTier == 'S Tier' ? 'active' : ''}">Hạng S</a>
-            <a href="?tier=A Tier" class="tier-tab ${selectedTier == 'A Tier' ? 'active' : ''}">Hạng A</a>
-            <a href="?tier=B Tier" class="tier-tab ${selectedTier == 'B Tier' ? 'active' : ''}">Hạng B</a>
-            <a href="?tier=Limited" class="tier-tab ${selectedTier == 'Limited' ? 'active' : ''}">Giới Hạn</a>
+            <a href="?tier=S Tier" class="tier-tab ${selectedTier == 'S Tier' ? 'active' : ''}" data-translate="character-tier-s">Hạng S</a>
+            <a href="?tier=A Tier" class="tier-tab ${selectedTier == 'A Tier' ? 'active' : ''}" data-translate="character-tier-a">Hạng A</a>
+            <a href="?tier=B Tier" class="tier-tab ${selectedTier == 'B Tier' ? 'active' : ''}" data-translate="character-tier-b">Hạng B</a>
+            <a href="?tier=Limited" class="tier-tab ${selectedTier == 'Limited' ? 'active' : ''}" data-translate="character-tier-limited">Giới Hạn</a>
         </div>
 
         <!-- Characters Grid -->
@@ -50,14 +50,14 @@
                             <span class="skill-icon">🛡️</span>
                             <span class="skill-name">${character.skill}</span>
                         </div>
-                        <button class="btn-primary btn-block">Mở Khóa</button>
+                        <button class="btn-primary btn-block" data-translate="character-unlock-btn">Mở Khóa</button>
                     </div>
                 </div>
             </c:forEach>
         </div>
 
         <c:if test="${empty characters}">
-            <div class="empty-state">
+            <div class="empty-state" data-translate="character-empty">
                 <p>Không có nhân vật nào trong hạng này.</p>
             </div>
         </c:if>
