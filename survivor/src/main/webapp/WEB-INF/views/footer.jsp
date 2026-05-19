@@ -100,63 +100,6 @@
 
 
 
-            // ================================
-            // LANGUAGE TOGGLE
-            // ================================
-            const translations = {
-
-                en: {
-                    "nav-features": "Features",
-                    "nav-characters": "Characters",
-                    "nav-weapons": "Weapons",
-                    "nav-enemies": "Enemies",
-                    "nav-events": "Events",
-                    "nav-play": "Play Now"
-                },
-
-                vi: {
-                    "nav-features": "Tính Năng",
-                    "nav-characters": "Nhân Vật",
-                    "nav-weapons": "Vũ Khí",
-                    "nav-enemies": "Quái Vật",
-                    "nav-events": "Sự Kiện",
-                    "nav-play": "Chơi Ngay"
-                }
-            };
-
-            const langToggle = document.getElementById("langToggle");
-            const langText = document.getElementById("langText");
-
-            let currentLang = localStorage.getItem("language") || "vi";
-
-            function updateLanguage(lang) {
-
-                document.querySelectorAll("[data-translate]").forEach(el => {
-
-                    const key = el.getAttribute("data-translate");
-
-                    if (translations[lang][key]) {
-                        el.textContent = translations[lang][key];
-                    }
-                });
-
-                langText.textContent = lang.toUpperCase();
-
-                localStorage.setItem("language", lang);
-            }
-
-            // Load saved language
-            updateLanguage(currentLang);
-
-            // Toggle language
-            langToggle.addEventListener("click", () => {
-
-                currentLang = currentLang === "vi" ? "en" : "vi";
-
-                updateLanguage(currentLang);
-            });
-
-
 
             // ================================
             // HERO SLIDER
@@ -209,7 +152,7 @@
 
         });
     </script>
-
+<script src="${pageContext.request.contextPath}/js/language.js"></script>
     </body>
 
     </html>
